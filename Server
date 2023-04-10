@@ -12,3 +12,6 @@ trojan://cab644f7-3bff-4897-8c49-e8e306b8908f@123xcty.eu-ddskrfhnxrqp.ondoprax.c
 
 vless://cab644f7-3bff-4897-8c49-e8e306b8908f@senjed.onrender.com:443?encryption=none&security=tls&sni=senjed.onrender.com&type=ws&host=senjed.onrender.com&path=%2F#VLess-render-germany
 vless://cab644f7-3bff-4897-8c49-e8e306b8908f@mci-01yj.onrender.com:443?encryption=none&security=tls&sni=mci-01yj.onrender.com&type=ws&host=mci-01yj.onrender.com&path=%2F#VLess-render-ohai
+
+vless://cab644f7-3bff-4897-8c49-e8e306b8908f@worker.senjedpda.tk:443?encryption=none&security=tls&sni=senjed.onrender.com&type=ws&host=senjed.onrender.com&path=%2F#VLess-render-germany-forward
+vless://cab644f7-3bff-4897-8c49-e8e306b8908f@mci-01yj.onrender.com:443?encryption=none&security=tls&sni=mci-01yj.onrender.com&type=ws&host=mci-01yj.onrender.com&path=%2F#VLess-render-ohai-forward
