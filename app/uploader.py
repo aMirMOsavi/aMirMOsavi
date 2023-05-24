@@ -1,7 +1,7 @@
 from github import Github
 from datetime import datetime
 
-access_token = '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'
+access_token = ''
 repository_name = 'aMirMOsavi'
 file_path = "./ss.txt"
 
