@@ -34,6 +34,7 @@ def decode_links(links):
     decoded_data = []
 
     for link in links:
+        print(f"Geting {link}")
         response = requests.get(link)
         encoded_bytes = response.content
         decoded_text = decode_base64(encoded_bytes)
@@ -50,6 +51,7 @@ def decode_dir_links(dir_links):
     decoded_dir_links = []
 
     for link in dir_links:
+        print(f"Geting {link}")
         response = requests.get(link)
         decoded_text = response.text
         decoded_dir_links.append(decoded_text)
@@ -73,14 +75,17 @@ def main():
 
     decoded_links = decode_links(links)
     decoded_dir_links = decode_dir_links(dir_links)
+    print("Merging...")
     merged_configs = decoded_links + decoded_dir_links
     output_folder = os.path.abspath(os.path.join(os.getcwd(), '.'))
 
+    print("Delete Old File...")
     # Delete existing output files
     filename = os.path.join(output_folder, f'All_Configs_Sub.txt')
     if os.path.exists(filename):
         os.remove(filename)
     
+    print("Save All Configs")
     # Write merged configs to output file
     output_file = os.path.join(output_folder, 'All_Configs_Sub.txt')
     with open(output_file, 'w') as f:
@@ -91,7 +96,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-
+print("Spliting ShadowSocks Configs")
 ptt = os.path.abspath(os.path.join(os.getcwd(), '.'))
 ss_file = os.path.join(ptt, 'ss.txt')
 
