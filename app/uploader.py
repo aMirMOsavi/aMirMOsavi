@@ -3,7 +3,7 @@ from github import Github
 from datetime import datetime
 import base64
 
-access_token = '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'
+access_token = ''
 repository_name = 'aMirMOsavi'
 
 
