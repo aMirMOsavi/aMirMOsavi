@@ -84,15 +84,20 @@ def main():
     filename = os.path.join(output_folder, f'All_Configs_Sub.txt')
     if os.path.exists(filename):
         os.remove(filename)
-    
+    filename = os.path.join(output_folder, f'ss.txt')
+    if os.path.exists(filename):
+        os.remove(filename)
+     
+        
     print("Save All Configs")
     # Write merged configs to output file
+
     output_file = os.path.join(output_folder, 'All_Configs_Sub.txt')
     with open(output_file, 'w') as f:
         for config in merged_configs:
             f.write(config + '\n')
 
-    
+   
 if __name__ == "__main__":
     main()
 
@@ -106,8 +111,12 @@ ss = ""
 file_path = r'./All_Configs_Sub.txt'
 with open(file_path, 'r') as file:
     response = file.read()
-
+count=0   
+countss=0
 for config in response.splitlines():
+    count+=1 
     if config.startswith("ss"):   
-        open(ss_file, "a").write(config + "\n")     
-  
+        open(ss_file, "a").write(config + "\n") 
+        countss+=1    
+print(f"All Config = {count}") 
+print(f"ShadowSocks Config = {countss}") 
