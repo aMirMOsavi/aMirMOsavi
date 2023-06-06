@@ -3,11 +3,13 @@ from github import Github
 from datetime import datetime
 import base64
 
+access_token = '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'
 repository_name = 'aMirMOsavi'
 
 
 print("Requesting...")
 
+g = Github(access_token)
 repo = g.get_user().get_repo(repository_name)
 
 
@@ -82,6 +84,7 @@ timeout = 60
 # Send the request with timeout
 response = requests.put(
     f"https://api.github.com/repos/{repository_name}/{repository_name}/contents/{file_name}",
+    headers={"Authorization": f"Bearer {access_token}"},
     json=data,
     timeout=timeout
 )
