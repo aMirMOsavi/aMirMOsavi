@@ -2,6 +2,8 @@ import pybase64
 import requests
 import binascii
 import os
+import pyperclip
+
 
 
 
@@ -120,3 +122,8 @@ for config in response.splitlines():
         countss+=1    
 print(f"All Config = {count}") 
 print(f"ShadowSocks Config = {countss}") 
+
+with open(ss_file, 'r') as f:
+    text = f.read()
+    pyperclip.copy(text)
+print(f"Copy ShadowSocks Links to Clipboard")     
