@@ -7,7 +7,7 @@ access_token = ''
 repository_name = 'aMirMOsavi'
 
 
-print("Requesting...")
+print("Connecting to Github...")
 
 g = Github(access_token)
 repo = g.get_user().get_repo(repository_name)
