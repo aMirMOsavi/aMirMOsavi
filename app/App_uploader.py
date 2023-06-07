@@ -6,12 +6,13 @@ import shutil
 import re
 import os
 
+access_token = ''
 repository_name = 'aMirMOsavi'
 
 
 # کپی کردن فایل
 shutil.copy2('./uploader.py', './uploader_copy.py')
-shutil.copy2('./App uploader.py', './App_uploader_copy.py')
+shutil.copy2('./App_uploader.py', './App_uploader_copy.py')
 
 print("Removing Access_token In Python File...")
 
@@ -31,7 +32,7 @@ with open('App_uploader_copy.py', 'r', encoding='utf-8') as file:
 # حذف مقدار access_token
 content = re.sub(r"access_token\s*=\s*'.*'", "access_token = ''", content)
 # ذخیره فایل با تغییرات
-with open('App_uploader_copy', 'w', encoding='utf-8') as file:
+with open('App_uploader_copy.py', 'w', encoding='utf-8') as file:
     file.write(content)
 
 
@@ -92,7 +93,7 @@ now = datetime.now()
 current_time = now.strftime("%H:%M")
 timee=str(current_time)
 
-file_name = "app/App uploader.py"
+file_name = "app/App_uploader.py"
 file_contents = repo.get_contents(file_name)
 sha = file_contents.sha
 
