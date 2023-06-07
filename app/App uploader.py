@@ -6,7 +6,6 @@ import shutil
 import re
 import os
 
-access_token = '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'
 repository_name = 'aMirMOsavi'
 
 
