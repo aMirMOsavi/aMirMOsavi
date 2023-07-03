@@ -36,6 +36,35 @@ repo.update_file(file_name, commit_message, content, sha)
 print(f"{file_path} Uploaded.")
 print(f"--------------------")
 
+
+
+
+file_path = "./eternity.txt"
+
+
+with open(file_path, 'r') as file:
+    content = file.read()
+    num_lines = len(content.splitlines())
+
+now = datetime.now()
+current_time = now.strftime("%H:%M")
+timee=str(current_time)
+
+file_name = "en"
+file_contents = repo.get_contents(file_name)
+sha = file_contents.sha
+
+commit_message = f"Update at {timee} - {num_lines} Server"
+print(f"Uploading {file_path} as {file_name} - {num_lines} server")
+repo.update_file(file_name, commit_message, content, sha)
+
+print(f"{file_path} Uploaded.")
+print(f"--------------------")
+
+
+
+
+
 file_path = "./sss.txt"
 
 
