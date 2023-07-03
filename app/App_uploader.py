@@ -41,7 +41,7 @@ print("Connecting To Github...")
 
 g = Github(access_token)
 repo = g.get_user().get_repo(repository_name)
-
+print("Connected To Github.")
 
 file_path = "./get.py"
 
