@@ -5,6 +5,13 @@ import os
 import pyperclip
 
 
+def save_link(link, file_name):
+    response = requests.get(link)
+    content = response.text
+    with open(file_name, 'w') as file:
+        file.write(content)
+
+ 
 
 
 def decode_base64(encoded):
@@ -63,6 +70,7 @@ def decode_dir_links(dir_links):
 
 def main():
     links = [
+        'https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.txt',
         'https://raw.githubusercontent.com/MrPooyaX/VpnsFucking/main/Shenzo.txt',
         'https://raw.githubusercontent.com/MrPooyaX/SansorchiFucker/main/data.txt',
         'https://raw.githubusercontent.com/w1770946466/Auto_proxy/main/Long_term_subscription1',
@@ -99,6 +107,12 @@ def main():
         for config in merged_configs:
             f.write(config + '\n')
 
+
+print("Get Eternity Sub...")
+link= "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.txt"
+file_name = "./eternity.txt"
+save_link(link, file_name)
+print("Saved Eternity Sub.")
    
 if __name__ == "__main__":
     main()
@@ -122,6 +136,10 @@ for config in response.splitlines():
         countss+=1    
 print(f"All Config = {count}") 
 print(f"ShadowSocks Config = {countss}") 
+
+with open("./eternity.txt", 'r') as file:
+        line_count = len(file.readlines())
+        print("Enernity server: ", line_count)
 
 with open(ss_file, 'r') as f:
     text = f.read()
