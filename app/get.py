@@ -70,7 +70,6 @@ def decode_dir_links(dir_links):
 
 def main():
     links = [
-        'https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.txt',
         'https://raw.githubusercontent.com/MrPooyaX/VpnsFucking/main/Shenzo.txt',
         'https://raw.githubusercontent.com/MrPooyaX/SansorchiFucker/main/data.txt',
         'https://raw.githubusercontent.com/w1770946466/Auto_proxy/main/Long_term_subscription1',
@@ -78,6 +77,7 @@ def main():
         'https://raw.githubusercontent.com/freefq/free/master/v2'
     ]
     dir_links = [
+        'https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.txt',
         'https://raw.githubusercontent.com/IranianCypherpunks/sub/main/config',
         'https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/sub_merge.txt',
         'https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt'
