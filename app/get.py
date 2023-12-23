@@ -79,7 +79,7 @@ def main():
     dir_links = [
         'https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.txt',
         'https://raw.githubusercontent.com/IranianCypherpunks/sub/main/config',
-        'https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/sub_merge.txt',
+        'https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt',
         'https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt'
     ]
 
@@ -103,9 +103,9 @@ def main():
     # Write merged configs to output file
 
     output_file = os.path.join(output_folder, 'All_Configs_Sub.txt')
-    with open(output_file, 'w') as f:
-        for config in merged_configs:
-            f.write(config + '\n')
+    with open(output_file, 'w', encoding='utf-8') as f:
+     for config in merged_configs:
+        f.write(config + '\n')
 
 
 print("Get Eternity Sub...")
@@ -125,7 +125,7 @@ ss_file = os.path.join(ptt, 'ss.txt')
 open(ss_file, "w").close()
 ss = ""
 file_path = r'./All_Configs_Sub.txt'
-with open(file_path, 'r') as file:
+with open(file_path, 'r', encoding='utf-8') as file:
     response = file.read()
 count=0   
 countss=0
